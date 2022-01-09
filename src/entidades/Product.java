@@ -32,6 +32,10 @@ public class Product {
 	public static String staticUpperCaseName(Product p) {
 		return p.getNome().toUpperCase();
 	}
+
+	public  String nonStaticUpperCaseName() {
+		return nome.toUpperCase();
+	}
 	@Override
 	public String toString() {
 		return nome  + ", " + String.format("%.2f", preco);
