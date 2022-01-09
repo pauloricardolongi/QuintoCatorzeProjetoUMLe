@@ -22,10 +22,11 @@ public class Programa {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		list.add(new Product("dvd",180.90));
+		list.add(new Product("radio",200.90));
 		
-		Function<Product, String> func = p -> p.getNome().toUpperCase();
 		
-		List<String> names = list.stream().map(func).collect(Collectors.toList());
+		
+		List<String> names = list.stream().map(p -> p.getNome().toUpperCase()).collect(Collectors.toList());
 		
 		names.forEach(System.out::println);
 
