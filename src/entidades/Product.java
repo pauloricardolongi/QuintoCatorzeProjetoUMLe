@@ -29,14 +29,9 @@ public class Product {
 		
 	}
 	
-	public static void staticPriceUpdate(Product p) {
-		p.setPreco(p.getPreco() * 1.1);
+	public static String staticUpperCaseName(Product p) {
+		return p.getNome().toUpperCase();
 	}
-
-	public  void nonStaticPriceUpdate() {
-		preco = preco * 1.1;
-	}
-
 	@Override
 	public String toString() {
 		return nome  + ", " + String.format("%.2f", preco);
